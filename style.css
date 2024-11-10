@@ -1,0 +1,129 @@
+/* Fonte principal e reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo com múltiplas partículas animadas */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #232526, #414345);
+    color: #fff;
+    position: relative;
+}
+
+/* Fundo com múltiplas partículas animadas */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #232526, #414345);
+    color: #fff;
+    position: relative;
+}
+
+/* Estilo e animação das partículas */
+.particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: particleAnimation 8s ease-in-out infinite;
+    opacity: 0.7;
+    filter: blur(4px);
+}
+
+/* Distribuição e cores das partículas */
+.particle:nth-child(1) { top: 10%; left: 15%; animation-delay: 1s; background: #ff6ec7; }
+.particle:nth-child(2) { top: 30%; left: 25%; animation-delay: 2s; background: #6efff5; }
+.particle:nth-child(3) { top: 50%; left: 35%; animation-delay: 3s; background: #ffbb6e; }
+.particle:nth-child(4) { top: 70%; left: 50%; animation-delay: 4s; background: #ff6ec7; }
+.particle:nth-child(5) { top: 80%; left: 65%; animation-delay: 1.5s; background: #6efff5; }
+.particle:nth-child(6) { top: 20%; left: 75%; animation-delay: 2.5s; background: #ffbb6e; }
+.particle:nth-child(7) { top: 60%; left: 85%; animation-delay: 3.5s; background: #ff6ec7; }
+
+/* Animação das partículas */
+@keyframes particleAnimation {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(-10px); }
+}
+
+
+/* Estilo aprimorado do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Efeito de fade-in para formulário */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+label {
+    font-weight: bold;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+/* Animação de foco nos inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #ff6ec7;
+    box-shadow: 0 0 15px #ff6ec7;
+    outline: none;
+    transform: scale(1.08);
+}
+
+/* Botões com efeito gradiente e sombra animada */
+button, a.button {
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6ec7, #ffbb6e);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 110, 199, 0.5);
+}
+
+button:hover, a.button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 110, 199, 0.7), 0 0 30px rgba(255, 187, 110, 0.7);
+}
